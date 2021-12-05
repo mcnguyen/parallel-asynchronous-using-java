@@ -27,13 +27,11 @@ public class ProductService {
     }
 
     public static void main(String[] args) {
-
         ProductInfoService productInfoService = new ProductInfoService();
         ReviewService reviewService = new ReviewService();
         ProductService productService = new ProductService(productInfoService, reviewService);
         String productId = "ABC123";
         Product product = productService.retrieveProductDetails(productId);
         log("Product is " + product);
-
     }
 }

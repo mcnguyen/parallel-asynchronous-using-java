@@ -32,4 +32,11 @@ public class HelloWorldService {
         });
     }
 
+    public CompletableFuture<String> anotherWorldFuture(String input) {
+        return CompletableFuture.supplyAsync(() -> {
+            delay(1000);
+            return input + " anotherWorld!";
+        });
+    }
+
 }
